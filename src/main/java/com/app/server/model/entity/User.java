@@ -3,7 +3,7 @@ package com.app.server.model.entity;
 import java.util.List;
 
 public class User {
-    private Long id;
+    private Integer id;
     private String login;
     private String password;
     private String nickname;

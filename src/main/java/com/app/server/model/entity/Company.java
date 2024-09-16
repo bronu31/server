@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Company {
 
-    private Long id;
+    private Integer id;
     private String name;
     private Employee owner;
     private Float rating;
