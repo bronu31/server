@@ -1,14 +1,28 @@
 package com.app.server.model.entity;
 
-import java.util.List;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "company")
 public class Company {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    @OneToOne
+    @PrimaryKeyJoinColumn
     private Employee owner;
     private Float rating;
-    private List<Employee> workers;
+    //@OneToMany
+    //private List<Employee> workers;
     private String description;
 
 }
