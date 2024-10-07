@@ -11,4 +11,6 @@ public interface BasicService <T> {
     List<T> getAllEntities();
     T getEntityById(int id);
     void deleteEntity(int id);
+    T saveEntity(T entity);
+    T createEntity(T entity);
 }
