@@ -30,6 +30,11 @@ public class CompanyController {
         return companyService.getEntityById(id);
     }
 
+    @PostMapping()
+    public Company createCompany(@RequestBody Company company){
+        return companyService.createEntity(company);
+    }
+
 
 }
 

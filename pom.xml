@@ -29,7 +29,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <flyway.user>postgres</flyway.user>
+        <flyway.client>postgres</flyway.client>
         <flyway.password>zxcv</flyway.password>
         <flyway.schemas>jdbc:postgresql://localhost:5432/client_server_app</flyway.schemas>
     </properties>

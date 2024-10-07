@@ -31,4 +31,14 @@ public class CompanyServiceImpl implements CompanyService {
     public void deleteEntity(int id) {
         companyRepository.deleteById(id);
     }
+
+    @Override
+    public Company saveEntity(Company entity) {
+        return companyRepository.save(entity);
+    }
+
+    @Override
+    public Company createEntity(Company entity) {
+        return saveEntity(entity);
+    }
 }

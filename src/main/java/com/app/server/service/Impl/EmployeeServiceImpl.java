@@ -29,4 +29,14 @@ public class EmployeeServiceImpl implements com.app.server.service.EmployeeServi
     public void deleteEntity(int id) {
         employeeDao.deleteById(id);
     }
+
+    @Override
+    public Employee saveEntity(Employee entity) {
+        return employeeDao.save(entity);
+    }
+
+    @Override
+    public Employee createEntity(Employee entity) {
+        return saveEntity(entity);
+    }
 }
