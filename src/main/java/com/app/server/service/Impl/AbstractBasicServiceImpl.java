@@ -5,11 +5,11 @@ import com.app.server.service.BasicService;
 
 import java.util.List;
 
-public abstract class BasicServiceImpl<T> implements BasicService<T> {
+public abstract class AbstractBasicServiceImpl<T> implements BasicService<T> {
 
     private final BasicRepository<T> repository;
 
-    protected BasicServiceImpl(BasicRepository<T> repository) {
+    protected AbstractBasicServiceImpl(BasicRepository<T> repository) {
         this.repository = repository;
     }
 

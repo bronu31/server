@@ -5,13 +5,12 @@ import com.app.server.repository.ClientRepository;
 import com.app.server.service.ClientService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 @Service
-public class ClientServiceImpl extends BasicServiceImpl<Client> implements ClientService {
+public class ClientServiceImplAbstract extends AbstractBasicServiceImpl<Client> implements ClientService {
 
     private ClientRepository clientRepository;
 
-    public ClientServiceImpl(ClientRepository clientRepository) {
+    public ClientServiceImplAbstract(ClientRepository clientRepository) {
         super(clientRepository);
         this.clientRepository = clientRepository;
     }
