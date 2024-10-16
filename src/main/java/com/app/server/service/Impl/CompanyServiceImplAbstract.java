@@ -5,16 +5,14 @@ import com.app.server.repository.CompanyRepository;
 import com.app.server.service.CompanyService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
-public class CompanyServiceImpl extends BasicServiceImpl<Company> implements CompanyService {
+public class CompanyServiceImplAbstract extends AbstractBasicServiceImpl<Company> implements CompanyService {
 
 
 
     private CompanyRepository companyRepository;
 
-    public CompanyServiceImpl(CompanyRepository companyRepository) {
+    public CompanyServiceImplAbstract(CompanyRepository companyRepository) {
         super(companyRepository);
         this.companyRepository = companyRepository;
     }
