@@ -23,7 +23,11 @@ public class ClientController {
         return clientService.createEntity(client);
     }
     @GetMapping()
-    public List<Client> getAllUsers(){
+    public List<Client> getAllClients(){
         return clientService.getAllEntities();
+    }
+    @GetMapping("/{id:[\\d]+]}")
+    public Client getClientById(@PathVariable("id") Integer id){
+        return clientService.getEntityById(id);
     }
 }
