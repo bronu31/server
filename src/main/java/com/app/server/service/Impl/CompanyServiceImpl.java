@@ -8,37 +8,15 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CompanyServiceImpl implements CompanyService {
+public class CompanyServiceImpl extends BasicServiceImpl<Company> implements CompanyService {
 
 
 
     private CompanyRepository companyRepository;
 
     public CompanyServiceImpl(CompanyRepository companyRepository) {
+        super(companyRepository);
         this.companyRepository = companyRepository;
     }
-    @Override
-    public List<Company> getAllEntities() {
-        return companyRepository.findAll();
-    }
 
-    @Override
-    public Company getEntityById(int id) {
-        return companyRepository.findById(id).get();
-    }
-
-    @Override
-    public void deleteEntity(int id) {
-        companyRepository.deleteById(id);
-    }
-
-    @Override
-    public Company saveEntity(Company entity) {
-        return companyRepository.save(entity);
-    }
-
-    @Override
-    public Company createEntity(Company entity) {
-        return saveEntity(entity);
-    }
 }

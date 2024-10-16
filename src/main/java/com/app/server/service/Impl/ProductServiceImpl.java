@@ -8,36 +8,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl extends BasicServiceImpl<Product> implements ProductService {
 
     private ProductRepository productRepository;
 
     public ProductServiceImpl(ProductRepository productRepository) {
+        super(productRepository);
         this.productRepository = productRepository;
     }
 
-    @Override
-    public List<Product> getAllEntities() {
-        return productRepository.findAll();
-    }
-
-    @Override
-    public Product getEntityById(int id) {
-        return productRepository.findById(id).get();
-    }
-
-    @Override
-    public void deleteEntity(int id) {
-        productRepository.deleteById(id);
-    }
-
-    @Override
-    public Product saveEntity(Product entity) {
-        return productRepository.save(entity);
-    }
-
-    @Override
-    public Product createEntity(Product entity) {
-        return saveEntity(entity);
-    }
 }
