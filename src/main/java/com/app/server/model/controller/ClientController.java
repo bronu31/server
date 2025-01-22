@@ -22,6 +22,7 @@ public class ClientController {
     public Client createUser(@RequestBody Client client){
         return clientService.createEntity(client);
     }
+    //TODO а зачем оно вообще нужно?
     @GetMapping()
     public List<Client> getAllClients(){
         return clientService.getAllEntities();
